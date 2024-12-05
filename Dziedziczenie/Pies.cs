@@ -10,7 +10,7 @@ namespace Dziedziczenie
     {
         public override void DajGlos()
         {
-            Console.WriteLine("HauHau");
+            MessageBox.Show("HauHau");
         }
     }
 }
