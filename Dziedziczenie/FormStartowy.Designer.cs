@@ -30,6 +30,8 @@ namespace Dziedziczenie
         private void InitializeComponent()
         {
             btnWyswietl = new Button();
+            cbZwierzeta = new ComboBox();
+            txtWiadomosc = new TextBox();
             SuspendLayout();
             // 
             // btnWyswietl
@@ -42,19 +44,39 @@ namespace Dziedziczenie
             btnWyswietl.UseVisualStyleBackColor = true;
             btnWyswietl.Click += btnWyswietl_Click;
             // 
+            // cbZwierzeta
+            // 
+            cbZwierzeta.FormattingEnabled = true;
+            cbZwierzeta.Location = new Point(213, 129);
+            cbZwierzeta.Name = "cbZwierzeta";
+            cbZwierzeta.Size = new Size(121, 23);
+            cbZwierzeta.TabIndex = 1;
+            // 
+            // txtWiadomosc
+            // 
+            txtWiadomosc.Location = new Point(340, 129);
+            txtWiadomosc.Name = "txtWiadomosc";
+            txtWiadomosc.Size = new Size(354, 23);
+            txtWiadomosc.TabIndex = 2;
+            // 
             // FormStartowy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtWiadomosc);
+            Controls.Add(cbZwierzeta);
             Controls.Add(btnWyswietl);
             Name = "FormStartowy";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnWyswietl;
+        private ComboBox cbZwierzeta;
+        private TextBox txtWiadomosc;
     }
 }

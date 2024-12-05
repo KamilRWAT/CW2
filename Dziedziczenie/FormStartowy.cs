@@ -30,19 +30,25 @@ namespace Dziedziczenie
 
         private void btnWyswietl_Click(object sender, EventArgs e)
         {
-            foreach (var zwierze in Zwierzeta)
-            {
-                if(zwierze is Pies)
-                {
-                    Pies pies = (Pies)zwierze;
-                    MessageBox.Show($"{pies.Rasa} wydaje dŸwiêk {pies.DajGlos()}");
-                }
-                else
-                {
-                    //string glos = zwierze.DajGlos();
-                    MessageBox.Show($"{zwierze.Gatunek} wydaje dŸwiêk {zwierze.DajGlos()}");
-                }
-            }
+            //foreach (var zwierze in Zwierzeta)
+            //{
+            //    if(zwierze is Pies)
+            //    {
+            //        Pies pies = (Pies)zwierze;
+            //        MessageBox.Show($"{pies.Rasa} wydaje dŸwiêk {pies.DajGlos()}");
+            //    }
+            //    else
+            //    {
+            //        //string glos = zwierze.DajGlos();
+            //        MessageBox.Show($"{zwierze.Gatunek} wydaje dŸwiêk {zwierze.DajGlos()}");
+            //    }
+            //}
+
+            cbZwierzeta.DataSource = Zwierzeta;
+            cbZwierzeta.DisplayMember = "Nazwa";
+            cbZwierzeta.ValueMember = "Gatunek";
+            Zwierze zwierze = cbZwierzeta.SelectedItem as Zwierze;
+            txtWiadomosc.Text = zwierze.Gatunek + " wydaje dŸwiêk " + zwierze.DajGlos();
         }
     }
 }
