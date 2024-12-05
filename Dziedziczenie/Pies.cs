@@ -8,9 +8,10 @@ namespace Dziedziczenie
 {
     public class Pies : Zwierze
     {
-        public override void DajGlos()
+        public string Rasa { get; set; }
+        public override string DajGlos()
         {
-            MessageBox.Show("HauHau");
+            return "HauHau";
         }
     }
 }

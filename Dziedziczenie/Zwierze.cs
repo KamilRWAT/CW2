@@ -13,9 +13,9 @@ namespace Dziedziczenie
         public int Wiek { get; set; }
         public double Waga { get; set; }
 
-        public virtual void DajGlos ()
+        public virtual string DajGlos ()
         {
-            MessageBox.Show("Zwierze wydaje dźwięk");
+            return "Zwierze wydaje dźwięk";
         }
     }
 }

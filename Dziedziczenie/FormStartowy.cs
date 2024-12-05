@@ -11,6 +11,7 @@ namespace Dziedziczenie
             {
                 Nazwa = "Reksio",
                 Gatunek = "Pies",
+                Rasa = "Samojed",
                 Wiek = 1,
                 Waga = 5
             };
@@ -31,7 +32,16 @@ namespace Dziedziczenie
         {
             foreach (var zwierze in Zwierzeta)
             {
-
+                if(zwierze is Pies)
+                {
+                    Pies pies = (Pies)zwierze;
+                    MessageBox.Show($"{pies.Rasa} wydaje dŸwiêk {pies.DajGlos()}");
+                }
+                else
+                {
+                    //string glos = zwierze.DajGlos();
+                    MessageBox.Show($"{zwierze.Gatunek} wydaje dŸwiêk {zwierze.DajGlos()}");
+                }
             }
         }
     }

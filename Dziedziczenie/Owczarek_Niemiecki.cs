@@ -12,15 +12,16 @@ namespace Dziedziczenie
         {
             Nazwa = "Czarek";
             Gatunek = "Pies";
+            Rasa = "Owczarek Niemiecki";
             Wiek = 2;
             Waga = 10;
             KolorSiersci = "Czarny";
         }
         public string KolorSiersci { get; set; }
-        public override void DajGlos()
+        public override string DajGlos()
         {
-            base.DajGlos(); // base. wywoluje metode z klasy po
-                            // ktorej dziedziczy (Pies)
+            return base.DajGlos(); // base. wywoluje metode z klasy po
+                                   // ktorej dziedziczy (Pies)
         }
     }
 }

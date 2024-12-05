@@ -8,9 +8,9 @@ namespace Dziedziczenie
 {
     public class Kot : Zwierze
     {
-        public override void DajGlos()
+        public override string DajGlos()
         {
-            MessageBox.Show("MiauMiau");
+            return "MiauMiau";
         }
     }
 }
